@@ -1,0 +1,20 @@
+@startuml RecordingOnTheGo
+
+entity paragraph as "Paragraph" {
++ id [PK]
+--
+body [メモの内容]
+created_at [作成日時]
+updated_at [更新日時]
+files_id [ファイルへのリンク](FK)
+}
+
+entity files as "FilesLink" {
++ id [PK]
+--
+files_id [ファイルパックid]
+file_type [ファイル種別]
+file_id [ファイルID]
+}
+
+@enduml

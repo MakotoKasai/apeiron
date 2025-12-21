@@ -1,0 +1,155 @@
+
+[versions]
+# Kotlin / Tooling
+kotlin = "2.2.21"
+coroutines = "1.9.0"
+serialization = "1.7.3"
+datetime = "0.6.1"
+
+# Ktor
+ktor = "3.3.3"
+
+# DI / Logging
+koin = "4.0.0"
+slf4j = "2.0.17"
+logback = "1.5.12"
+
+# DB (JVM only)
+exposed = "0.56.0"
+hikari = "6.2.1"
+sqliteJdbc = "3.47.0.0"
+postgres = "42.7.4"
+
+# Compose Multiplatform
+compose = "1.6.11"
+
+# Android
+agp = "8.6.1"
+androidxCoreKtx = "1.15.0"
+androidxActivityCompose = "1.9.3"
+androidxLifecycle = "2.8.7"
+compose-bom = "2024.12.01"
+activity-compose = "1.9.3"
+
+
+# Testing
+junit = "5.11.3"
+
+#mobile
+room = "2.6.1"
+ksp = "2.2.21-2.0.4"
+
+detekt = "1.23.7"
+
+
+[libraries]
+# KotlinX
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "datetime" }
+
+# Ktor server
+ktor-server-core = { group = "io.ktor", name = "ktor-server-core", version.ref = "ktor" }
+ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty", version.ref = "ktor" }
+ktor-server-cors = { group = "io.ktor", name = "ktor-server-cors", version.ref = "ktor" }
+ktor-server-call-logging = { group = "io.ktor", name = "ktor-server-call-logging", version.ref = "ktor" }
+ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-server-status-pages = { group = "io.ktor", name = "ktor-server-status-pages", version.ref = "ktor" }
+ktor-server-auth = { group = "io.ktor", name = "ktor-server-auth", version.ref = "ktor" }
+
+# Ktor client (common)
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-auth = { group = "io.ktor", name = "ktor-client-auth", version.ref = "ktor" }
+
+# Ktor client engines (platform)
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }          # Desktop/JVM
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }    # Android
+ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }    # iOS
+
+# DI
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+
+# Logging
+slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+
+# DB (JVM)
+exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version.ref = "exposed" }
+exposed-dao = { group = "org.jetbrains.exposed", name = "exposed-dao", version.ref = "exposed" }
+exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version.ref = "exposed" }
+exposed-kotlin-datetime = { group = "org.jetbrains.exposed", name = "exposed-kotlin-datetime", version.ref = "exposed" }
+
+hikari = { group = "com.zaxxer", name = "HikariCP", version.ref = "hikari" }
+sqlite-jdbc = { group = "org.xerial", name = "sqlite-jdbc", version.ref = "sqliteJdbc" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgres" }
+
+# AndroidX (mobile)
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+
+# Test
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit" }
+
+[bundles]
+kotlinx-core = [
+  "kotlinx-coroutines-core",
+  "kotlinx-serialization-json",
+  "kotlinx-datetime"
+]
+
+ktor-client-common = [
+  "ktor-client-core",
+  "ktor-client-content-negotiation",
+  "ktor-client-logging"
+]
+
+ktor-server = [
+  "ktor-server-core",
+  "ktor-server-netty",
+  "ktor-server-cors",
+  "ktor-server-call-logging",
+  "ktor-server-content-negotiation",
+  "ktor-serialization-kotlinx-json",
+  "ktor-server-status-pages"
+]
+
+exposed = [
+  "exposed-core",
+  "exposed-dao",
+  "exposed-jdbc",
+  "exposed-kotlin-datetime"
+]
+
+tests-junit5 = [
+  "junit-jupiter-api",
+  "junit-jupiter-engine"
+]
+
+[plugins]
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+
+kotlin-android = { id = "org.jetbrains.kotlin.android"}
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm"}
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform"}
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization"}
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose" }
+
+android-application = { id = "com.android.application", version.ref = "agp"}
+android-library = { id = "com.android.library" , version.ref = "agp"}
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
