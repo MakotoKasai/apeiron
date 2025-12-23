@@ -30,10 +30,15 @@ androidxActivityCompose = "1.9.3"
 androidxLifecycle = "2.8.7"
 compose-bom = "2024.12.01"
 activity-compose = "1.9.3"
-
+lifecycle = "2.8.7"
 
 # Testing
 junit = "5.11.3"
+junit4 = "4.13.2"
+androidxTestCore = "1.6.1"
+androidxTestExt = "1.2.1"
+androidxTestRunner = "1.6.2"
+robolectric = "4.16"
 
 #mobile
 room = "2.6.1"
@@ -100,10 +105,19 @@ androidx-compose-foundation = { module = "androidx.compose.foundation:foundation
 androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+
 
 # Test
 junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit" }
 junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit" }
+junit = { module = "junit:junit", version.ref = "junit4" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTestCore" }
+androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTestExt" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
+robolectric = {module = "org.robolectric:robolectric", version.ref = "robolectric"}
+
 
 [bundles]
 kotlinx-core = [

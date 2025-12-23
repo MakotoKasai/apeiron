@@ -3,17 +3,21 @@ package apeiron.mobile
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 
 class MainActivity : ComponentActivity() {
-    private lateinit var container: AppContainer
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        container = AppContainer(applicationContext)
-
+        val app = application as ApeironApp
         setContent {
-            // まず固定IDでOK。後で Note 一覧画面を作って遷移する
-            NoteDetailScreen(noteId = "note-001", container = container)
+            MaterialTheme {
+                Surface {
+                    ParagraphScreen(app)
+                }
+            }
         }
     }
 }

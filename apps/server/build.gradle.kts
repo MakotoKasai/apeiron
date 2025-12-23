@@ -5,12 +5,13 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":packages:main"))
+    implementation(project(":packages:core"))
     implementation(project(":packages:client-webapi"))
+    implementation(project(":packages:infra-web"))
 
-    implementation(projects.packages.core)
-    implementation(projects.packages.infraWeb)
 
+
+    implementation(libs.kotlinx.datetime)
     implementation(libs.bundles.ktor.server)
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.logback.classic)

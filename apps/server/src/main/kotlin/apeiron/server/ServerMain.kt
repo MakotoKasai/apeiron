@@ -15,7 +15,7 @@ import io.ktor.server.request.receive
 import io.ktor.server.response.respond
 import io.ktor.server.response.respondText
 import java.util.UUID
-import kotlin.time.Clock
+import kotlinx.datetime.Clock
 
 fun main() {
     val store = mutableListOf<ReviewDto>()

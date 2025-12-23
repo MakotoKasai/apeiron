@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
 
-    implementation(project(":packages:main"))
+    implementation(project(":packages:core"))
     implementation(libs.bundles.exposed)
     implementation(libs.sqlite.jdbc)
 

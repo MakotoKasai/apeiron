@@ -27,18 +27,26 @@ android {
 }
 
 dependencies {
-    implementation(project(":packages:main"))
-    implementation(project(":packages:core"))
+
     implementation(project(":packages:client-webapi"))
     implementation(project(":packages:infra-mobile"))
+    implementation(project(":packages:core"))
 
+    implementation(libs.kotlinx.datetime)
     // AndroidのHTTPエンジンはここ
     implementation(libs.ktor.client.okhttp)
     implementation(libs.ktor.serialization.kotlinx.json)
 
     implementation(libs.androidx.core.ktx)
 
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
 
     // Compose BOM
     implementation(platform(libs.androidx.compose.bom))

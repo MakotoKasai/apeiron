@@ -6,7 +6,7 @@ plugins {
 
 dependencies {
     implementation(compose.desktop.currentOs)
-    implementation(project(":packages:main"))
+    implementation(project(":packages:core"))
 
     implementation(project(":packages:infra-desktop"))
     implementation(project(":packages:client-webapi"))

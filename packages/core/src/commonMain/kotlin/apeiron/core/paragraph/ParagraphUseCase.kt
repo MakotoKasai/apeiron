@@ -14,8 +14,8 @@ class ParagraphUseCase(
                 id = id,
                 noteId = noteId,
                 text = text,
-                createdAt = instantFromMillis,
-                updatedAt = instantFromMillis,
+                createdAtMillis = instantFromMillis,
+                updatedAtMillis = instantFromMillis,
             )
         )
     }

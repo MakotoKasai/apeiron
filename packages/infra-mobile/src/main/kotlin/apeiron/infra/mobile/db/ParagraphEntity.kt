@@ -2,18 +2,17 @@ package apeiron.infra.mobile.db
 
 import androidx.room.Entity
 import androidx.room.Index
-import androidx.room.PrimarKey
+import androidx.room.PrimaryKey
 
 
 @Entity(
     tableName = "paragraphs",
-    indices = [Index(noteId)]
+    indices = [Index(*["noteId"])]
 )
-
 data class ParagraphEntity(
     @PrimaryKey val id: String,
     val noteId: String?,
     val text: String,
-    val createdAt: Long,
-    val modifiedAt: Long,
+    val createdAtMillis: Long,
+    val updatedAtMillis: Long,
 )

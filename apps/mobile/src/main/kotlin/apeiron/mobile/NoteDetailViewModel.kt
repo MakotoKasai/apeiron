@@ -20,7 +20,7 @@ class NoteDetailViewModel(
 
     fun refresh() {
         viewModelScope.launch {
-            _items.value = useCase.list(noteId)
+            _items.value = useCase.listByNote(noteId)
         }
     }
 

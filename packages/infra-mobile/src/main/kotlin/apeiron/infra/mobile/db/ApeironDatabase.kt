@@ -6,8 +6,8 @@ import androidx.room.RoomDatabase
 @Database(
     entities = [ParagraphEntity::class],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
-abstract class ApeironDatabase: RoomDatabase() {
+abstract class ApeironDatabase : RoomDatabase() {
     abstract fun paragraphDao(): ParagraphDao
 }

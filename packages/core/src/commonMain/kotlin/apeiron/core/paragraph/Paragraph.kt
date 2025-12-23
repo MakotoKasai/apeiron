@@ -6,6 +6,6 @@ data class Paragraph(
     val id: String,
     val noteId: String?,
     val text: String,
-    val createdAt: Instant,
-    val updatedAt: Instant,
+    val createdAtMillis: Instant,
+    val updatedAtMillis: Instant,
 )

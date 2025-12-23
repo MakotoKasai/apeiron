@@ -33,7 +33,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":packages:main")
+include(":packages:core")
 include(":packages:client-webapi")
 include(":packages:export")
 include(":packages:infra-desktop")
